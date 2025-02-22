@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Screen/page_dua.dart';
+import 'package:project1/Screen/page_empat.dart';
+import 'package:project1/Screen/page_satu.dart';
+import 'package:project1/Screen/page_tiga.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +25,7 @@ class MyApp extends StatelessWidget {
         // and then invoke "hot reload" (save your changes or press the "hot
         // reload" button in a Flutter-supported IDE, or press "r" if you used
         // the command line to start the app).
-        //flf
+        // flf
         // Notice that the counter didn't reset back to zero; the application
         // state is not lost during the reload. To reset the state, use hot
         // restart instead.
@@ -36,7 +40,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//ketik st
 class PageOne extends StatelessWidget {
   const PageOne({super.key});
 
@@ -47,12 +50,113 @@ class PageOne extends StatelessWidget {
         //appBar : properti dari sebuah widget
         //AppBar : widget
         title: Text('Aplikasi Pertama', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.purple,
+        backgroundColor: const Color.fromARGB(255, 143, 58, 151),
       ),
       body: Center(
-        child: Text(
-          "Selamat Datang di Flutter App pertama MI 2B\nFadhil Dzaky Arhab\n2301092010",
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text("Selamat Datang di Flutter App pertama MI2B"),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PageSatu()),
+                  );
+                },
+                elevation: 18.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                //ini untuk pindah page
+                color: Color(0xDDF15C14FF),
+                clipBehavior: Clip.antiAlias,
+                //ini untuk pindah page
+                // color: Colors.purple,
+                child: Text(
+                  'Page 1',
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PageDua()),
+                  );
+                },
+                elevation: 18.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                //ini untuk pindah page
+                color: Color(0xDDF15C14FF),
+                clipBehavior: Clip.antiAlias,
+                // color: Colors.purple,
+                child: Text(
+                  'Page 2',
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PageTiga()),
+                  );
+                },
+                elevation: 18.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                //ini untuk pindah page
+                color: Color(0xDDF15C14FF),
+                clipBehavior: Clip.antiAlias,
+                //ini untuk pindah page
+                // color: Colors.purple,
+                child: Text(
+                  'Page 3',
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PageEmpat()),
+                  );
+                },
+                elevation: 18.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                //ini untuk pindah page
+                color: Color(0xDDF15C14FF),
+                clipBehavior: Clip.antiAlias,
+                // color: Colors.purple,
+                child: Text(
+                  'Page 4',
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                ),
+              ),
+            ),
+          ],
         ),
+
         //child :  cuma bisa nampung 1 widget
         //children : bisa nampung beberapa widget
       ),
